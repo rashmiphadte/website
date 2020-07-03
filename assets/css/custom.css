@@ -4,6 +4,13 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+.mt-5{
+  margin-top: 5%;
+}
+
+.background{
+  background-color: #54589d;
+}
 
 /* navbar */
 .navbar {
@@ -21,3 +28,9 @@ body{
   margin-top:10px;
 }
 
+/* section carousels */
+.carousel-indicators > li {
+  border-radius: 50%;
+  width:10px;
+  height:10px;
+}
