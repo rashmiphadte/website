@@ -1,17 +1,58 @@
-
-body{
+body {
   background: #f7f7f7;
   font-family: 'Montserrat', sans-serif;
 }
 
-.margin-top-5{
+.margin-top-5 {
   margin-top: 5%;
 }
 
-.background{
+.intro-section {
   background-color: #54589d;
 }
 
+.intro-section h1 {
+  font-size: 5em;
+  font-weight: 900;
+  margin-top: 5%;
+  color: #fff;
+}
+.intro-section span{
+  color: #fffd03;
+}
+
+.intro-section p{
+  color: #fff;
+  font-size: 2em;
+}
+
+.intro-section a{
+  background-color: #fffd03;
+  color: #54589d;
+  padding: 0.5em 3em 0.5em 3em;
+  border: none;
+  border-radius: 0px;
+  font-size: 2em;
+  font-weight: 900;
+  margin-bottom: 3em;
+  margin-top: 1em;
+}
+
+.intro-section a:hover{
+  background-color: #fffd03;
+  color: #54589d;
+  padding: 0.5em 3em 0.5em 3em;
+  border: none;
+  border-radius: 0px;
+  font-size: 2em;
+  font-weight: 900;
+  margin-bottom: 3em;
+  margin-top: 1em;
+}
+
+.intro-quote{
+  background-image: url("../img/introBg.png");
+}
 /* navbar */
 .navbar {
   background-color: #54589d;
@@ -23,14 +64,14 @@ body{
 }
 
 
-.navbar li a{
+.navbar li a {
   color: #fff;
-  margin-top:10px;
+  margin-top: 10px;
 }
 
 /* section carousels */
-.carousel-indicators > li {
+.carousel-indicators>li {
   border-radius: 50%;
-  width:10px;
-  height:10px;
+  width: 10px;
+  height: 10px;
 }
