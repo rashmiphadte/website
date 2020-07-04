@@ -114,6 +114,19 @@ q::after {
   background-image: url("../img/testimonialBg.png");
 }
 
+.testimonial-bg p {
+  color: #fff;
+  font-size: 2em;
+  margin-top: 3em;
+  font-weight: 900;
+}
+
+.testimonial-bg h3{
+  color: #fff;
+  font-size: 2em;
+  margin-top: 1em;
+  font-weight: 900;
+}
 /* navbar */
 .navbar {
   background-color: #54589d;
