@@ -121,11 +121,15 @@ q::after {
   font-weight: 900;
 }
 
-.testimonial-bg h3{
+.testimonial-bg h3 {
   color: #fff;
   font-size: 2em;
   margin-top: 1em;
   font-weight: 900;
+}
+
+.footer-section{
+  background-image: url("../img/homeContactBg.png");
 }
 /* navbar */
 .navbar {
