@@ -18,7 +18,7 @@
 
 <body>
     <header>
-        <div class="container margin-top-5">
+        <div class="container-fluid margin-top-5">
             <!-- call now option -->
             <!-- <div class="float-right mt-2 text-right">
                 <div class="d-block">
@@ -26,7 +26,7 @@
                 </div>
             </div> -->
             <nav class="navbar navbar-expand-md navbar-dark">
-                <div class="container">
+                <div class="container-fluid">
                     <!-- Brand -->
                     <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="logo" class="img-fluid"
                             width="80px"></a>
@@ -39,16 +39,25 @@
                     <!-- Navbar links -->
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
 
-                        <ul class="navbar-nav mr-auto">
+                        <ul class="navbar-nav ">
                             <li class="nav-item active mx-2">
                                 <a class="nav-link" href="#">Home </a>
                             </li>
                             <li class="nav-item mx-2">
                                 <a class="nav-link" href="#">About Us </a>
                             </li>
-                            <li class="nav-item mx-2">
-                                <a class="nav-link" href="#">Projects</a>
-                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Projects
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" style="color:black" href="#">Current</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" style="color:black"  href="#">Completed</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="#" style="color:black" >Upcoming</a>
+                                </div>
+                              </li>
 
                             <li class="nav-item mx-2">
                                 <a class="nav-link" href="#">Testimonials</a>
@@ -65,9 +74,9 @@
 
 
     <!-- slider -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div id="carouselConstruction" class="carousel slide" data-ride="carousel">
+            <div id="carouselConstruction" class=" " data-ride="carousel">
                 <ul class="carousel-indicators">
                     <li data-target="#carouselConstruction" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselConstruction" data-slide-to="1"></li>
@@ -99,7 +108,7 @@
 
     </div>
     <!-- details section -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row background">
             <div class="col-md-8">
                 <h1>
@@ -124,7 +133,7 @@
         </div>
     </div>
     <!-- project section -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
                 <img src="assets/img/appartment.png" alt="aparttments" class="img-fluid">
@@ -141,7 +150,7 @@
         </div>
     </div>
     <!-- testimonial -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             TESTIMONIAL
         </div>
@@ -157,7 +166,7 @@
         </div>
     </div>
     <!-- contact us -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-8">
                 <form>
@@ -172,7 +181,7 @@
             </div>
         </div>
     </div>
-    <footer class="container">
+    <footer class="container-fluid">
         <div class="row">
             <div class="col-md-4">
                 links
