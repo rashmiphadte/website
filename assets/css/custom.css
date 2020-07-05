@@ -228,6 +228,10 @@ q::after {
   text-transform: uppercase;  
 }
 
+.about-section{
+  color: #54589d;
+  font-size: 20pt;
+}
 /* navbar */
 .navbar {
   background-color: #54589d;
