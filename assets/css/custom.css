@@ -376,6 +376,7 @@ q::after {
 .testimonial-header {
   font-size: 35pt;
   color: #54589d;
+  font-family: Century751No2;
 }
 
 .current-project-section {
@@ -393,6 +394,17 @@ q::after {
   font-size: 20pt;
   text-transform: uppercase;
 }
+.details-section div p a {
+  background-color: #5359A3;
+  color: #FEE400;
+  padding: 0em .9em;
+  border: none;
+  border-radius: 0px;
+  font-size: 38pt;
+  margin-left: 2em;
+  margin-top: 0;
+}
+.details-section div p a:hover { color: #FEE400; }
 
 .call-now-section {
   background-image: url("../img/slider.png");
@@ -432,10 +444,6 @@ q::after {
   color: #54589d;
   font-size: 25pt;
   text-transform: uppercase;
-}
-
-.details-section {
-  background-color: #cccccc;
 }
 
 .details-section p {
