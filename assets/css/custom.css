@@ -403,7 +403,7 @@ q::after {
 .call-now-section a {
   background-color: #fffd03;
   color: #54589d;
-  padding: 0.4em 2em;
+  padding: .8em 3.2em;
   border: none;
   border-radius: 0px;
   font-size: 2em;
@@ -422,22 +422,68 @@ q::after {
   color: #fff;
 }
 
-.penthouse-section h1{
+.penthouse-section h1 {
   color: #54589d;
   font-size: 40pt;
   text-transform: uppercase;
 }
 
-.penthouse-section h3{
+.penthouse-section h3 {
   color: #54589d;
   font-size: 25pt;
   text-transform: uppercase;
 }
 
-.details-section{
+.details-section {
   background-color: #cccccc;
 }
-.details-section p{
+
+.details-section p {
   font-size: 25pt;
   color: #54589d;
+}
+
+.completed-project-section {
+  color: #54589d;
+  font-size: 35pt;
+  background-color: #fff;
+}
+
+.completed-project-section h1 {
+  font-size: 40pt;
+  text-transform: uppercase;
+}
+
+.completed-project-section h3 {
+  font-size: 25pt;
+  text-transform: uppercase;
+}
+
+.completed-project-section span {
+  font-size: 25pt;
+  text-transform: capitalize;
+}
+
+.completed-project-section p {
+  font-size: 20pt;
+}
+
+.penthouse-section span {
+  font-size: 25pt;
+  text-transform: capitalize;
+}
+
+.disclaimer-section {
+  background-color: #fff;
+  color: #111111;
+}
+
+.disclaimer-section h1{
+  font-size: 40pt;
+  text-transform: uppercase;
+}
+
+.disclaimer-section {
+  font-size: 18pt;
+  text-align: justify;
 }
