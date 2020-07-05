@@ -35,7 +35,7 @@
 }
 
 body {
-  background: #f7f7f7;
+  background: #FFF;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -240,6 +240,53 @@ q::after {
   font-family: 'FuturaBT';
 }
 
+.contactUs h1 {
+  font-size: 32pt;
+  font-family: 'Futura';
+  color: #264795;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  padding: 1.5em 0;
+}
+.constacUsHome form p {
+  float: left;
+  font-size: 24pt;
+  font-family: 'Futura';
+  color: #264795;
+  width: 50%;
+}
+.constacUsHome form p:nth-of-type(3) {
+  width: 100%;
+}
+.constacUsHome form p input {
+  width: 80%;
+  border: none;
+  background: #E6E6E6;
+  line-height: 1.8em;
+}
+.constacUsHome form p textarea {
+  border: none;
+  background: #E6E6E6;
+  width: 90%;
+}
+.submit {
+  width: 50% !important;
+  text-transform: uppercase;
+  color: #FFF;
+  background: #5359A3 !important;
+  margin-right: 20%;
+  margin-top: .5em;
+  letter-spacing: .4em;
+}
+.addressSection {
+  font-family: 'Futura';
+  font-size: 24pt;
+  color: #264795;
+}
+.addressSection p { 
+  margin-bottom: .8em;
+  line-height: 1.2em; 
+}
 .footerBg {
   background: url(../img/footerBg.png) no-repeat bottom #FFF;
   min-height: 180px;
