@@ -3,27 +3,33 @@
   font-family: 'arial';
   src: url(arial.ttf);
 }
+
 @font-face {
   font-family: 'Century751BT';
   src: url(Century751BT.ttf);
 }
-@font-face { 
+
+@font-face {
   font-family: 'Century751No2';
   src: url(Century751No2.ttf);
 }
-@font-face { 
+
+@font-face {
   font-family: 'CenturyGothic';
   src: url(CenturyGothic.TTF);
 }
-@font-face { 
+
+@font-face {
   font-family: 'FuturaBT';
   src: url(FuturaBT.ttf);
 }
-@font-face { 
+
+@font-face {
   font-family: 'Futura';
   src: url(futura.ttf);
 }
-@font-face { 
+
+@font-face {
   font-family: 'Poppins';
   src: url(PoppinsMedium.ttf);
 }
@@ -40,14 +46,25 @@ body {
 .logo {
   margin-left: 7% !important;
 }
+
 #navbarNav {
   font-size: 20pt;
   right: 10%;
   top: 0;
 }
-.last-nav { padding-right: 0; }
-.navbar-dark .navbar-nav .nav-link { color: #fff; }
-.active>a{ border-bottom: 5px solid #9999ff; padding-bottom: 0;}
+
+.last-nav {
+  padding-right: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.active>a {
+  border-bottom: 5px solid #9999ff;
+  padding-bottom: 0;
+}
 
 .callInfo {
   color: #FFF;
@@ -57,11 +74,23 @@ body {
   text-transform: uppercase;
   font-size: 16pt;
 }
+
 .dropdown-toggle::after {
   border-top: .3em solid #a6a9cb;
 }
-.carousel-control-prev-icon { width: 39pt; height: 80pt; background-image: url("../img/prev.png"); }
-.carousel-control-next-icon { width: 39pt; height: 80pt;  background-image: url("../img/next.png"); }
+
+.carousel-control-prev-icon {
+  width: 39pt;
+  height: 80pt;
+  background-image: url("../img/prev.png");
+}
+
+.carousel-control-next-icon {
+  width: 39pt;
+  height: 80pt;
+  background-image: url("../img/next.png");
+}
+
 .intro-section {
   background-color: #54589d;
 }
@@ -96,7 +125,7 @@ body {
 
 .intro-section a:hover {
   color: #54589d;
-  
+
 }
 
 .intro-quote {
@@ -125,6 +154,7 @@ body {
 .intro-quote h1 strong {
   font-size: 61pt;
 }
+
 q {
   quotes: "“ "" ”""‘ "" ’";
   font-family: 'Century751BT';
@@ -182,7 +212,22 @@ q::after {
   margin-bottom: 1.5em;
 }
 
-.testimonial-bg p q { font-family: 'Century751No2'; }
+.testimonial-div p {
+  color: #54589d;
+  font-size: 25pt;
+  margin-top: 1em;
+  font-family: 'Century751No2';
+  line-height: 1.3em;
+  margin-bottom: 1.5em;
+}
+
+.testimonial-div h3 {
+  color: #54589d;
+}
+
+.testimonial-bg p q {
+  font-family: 'Century751No2';
+}
 
 .testimonial-bg h3 {
   color: #fff;
@@ -190,12 +235,16 @@ q::after {
   margin-top: 1em;
   font-family: 'Futura';
 }
-.testimonial-bg h3 b { font-family: 'FuturaBT'; }
+
+.testimonial-bg h3 b {
+  font-family: 'FuturaBT';
+}
 
 .footerBg {
   background: url(../img/footerBg.png) no-repeat bottom #FFF;
   min-height: 180px;
 }
+
 .footer-section {
   background: #264795;
   margin-top: -1px;
@@ -204,34 +253,46 @@ q::after {
   font-family: arial;
   font-size: 18pt;
 }
+
 .footerLinks {
   list-style: none;
   padding: 0;
   margin-bottom: 0.5em;
 }
+
 .footerLinks li {
   display: inline-block;
   padding: 0 .5em;
   border-right: 1px solid;
 }
-.footerLinks .last { border:none; }
+
+.footerLinks .last {
+  border: none;
+}
+
 .footerLinks li a {
   color: #FFF;
 }
+
 .socialIcons a {
   padding: 0 0.8em;
 }
-.designedBy { font-family: futuraBt; }
-.designedBy span {     
-  display: block;
-  font-size: 14pt;
-  text-transform: uppercase;  
+
+.designedBy {
+  font-family: futuraBt;
 }
 
-.about-section{
+.designedBy span {
+  display: block;
+  font-size: 14pt;
+  text-transform: uppercase;
+}
+
+.about-section {
   color: #54589d;
   font-size: 20pt;
 }
+
 /* navbar */
 .navbar {
   background-color: #54589d;
@@ -254,4 +315,9 @@ q::after {
   width: 20px;
   height: 20px;
   margin: 0 10px;
+}
+
+.testimonial-header {
+  font-size: 35pt;
+  color: #54589d;
 }
