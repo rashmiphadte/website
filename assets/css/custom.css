@@ -102,6 +102,12 @@ body {
   background-image: url("../img/next.png");
 }
 
+.carousel-item {
+  transition: -webkit-transform .9s ease-out;
+  transition: transform .9s ease-out;
+  transition: transform .9s ease-out,-webkit-transform .9s ease-out;
+}
+
 .intro-section {
   background-color: #54589d;
 }
@@ -201,7 +207,7 @@ q::after {
 
 .project-section a {
   color: #5359A3;
-  font-size: 40pt;
+  font-size: 38pt;
   display: block;
   text-align: center;
   font-family: 'Poppins';
@@ -315,6 +321,8 @@ q::after {
   line-height: 1.2em;
 }
 
+.addressSection p a, .contactUs p a { color: #264795; text-decoration: none;}
+.scrollTop { position: relative; left: 80%; cursor: pointer; }
 .footerBg {
   background: url(../img/footerBg.png) no-repeat bottom #FFF;
   min-height: 180px;

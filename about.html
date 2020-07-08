@@ -95,7 +95,7 @@
         </div>
     </div>
 
-
+    <img onclick="topFunction()" class="scrollTop" src="assets/img/scrollTop.png" class="img-fluid mb-4">
     <div class="container-fluid" style="background: #264795;">
         <div class="row footerBg">
 
@@ -144,6 +144,12 @@
     <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    </script>
 </body>
 
 </html>
