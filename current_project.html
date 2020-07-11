@@ -86,22 +86,22 @@
         <div class="row mt-5 mb-5">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <img src="assets/img/currentPortuguese1.png" alt="portuguese styled house" class="img-fluid zoom">
+                <a class="fancybox-thumb" rel="fancybox-thumb" href="assets/img/currentPortuguese1.png" title=""><img src="assets/img/currentPortuguese1.png" alt="portuguese styled house" class="img-fluid"></a>
             </div>
         </div>
         <div class="row mt-5 mb-5">
             <div class="col-md-2"></div>
             <div class="col-md-2">
-                <img src="assets/img/currentPortuguese2.png" alt="portuguese styled house" class="img-fluid zoom">
+                <a class="fancybox-thumb" rel="fancybox-thumb" href="assets/img/currentPortuguese2.png" title=""><img src="assets/img/currentPortuguese2.png" alt="portuguese styled house" class="img-fluid"></a>
             </div>
             <div class="col-md-2">
-                <img src="assets/img/currentPortuguese3.png" alt="portuguese styled house" class="img-fluid zoom">
+                <a class="fancybox-thumb" rel="fancybox-thumb" href="assets/img/currentPortuguese3.png" title=""><img src="assets/img/currentPortuguese3.png" alt="portuguese styled house" class="img-fluid"></a>
             </div>
             <div class="col-md-2">
-                <img src="assets/img/currentPortuguese4.png" alt="portuguese styled house" class="img-fluid zoom">
+                <a class="fancybox-thumb" rel="fancybox-thumb" href="assets/img/currentPortuguese4.png" title=""><img src="assets/img/currentPortuguese4.png" alt="portuguese styled house" class="img-fluid"></a>
             </div>
             <div class="col-md-2">
-                <img src="assets/img/currentPortuguese5.png" alt="portuguese styled house" class="img-fluid zoom">
+                <a class="fancybox-thumb" rel="fancybox-thumb" href="assets/img/currentPortuguese5.png" title=""><img src="assets/img/currentPortuguese5.png" alt="portuguese styled house" class="img-fluid"></a>
             </div>
         </div>
     </div>
@@ -118,12 +118,12 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-5">
-                <img src="assets/img/currentApartment1.png" class="img-fluid zoom" alt="current apartment">
+                <a class="fancybox-thumb" rel="fancybox-thumb" href="assets/img/currentApartment1.png" title=""><img src="assets/img/currentApartment1.png" class="img-fluid" alt="current apartment"></a>
             </div>
             <div class="col-md-4">
                 <div class="row">
                     <div class="col-md-8">
-                        <img src="assets/img/currentApartment2.png" class="img-fluid zoom" alt="apartment bambolim">
+                        <a class="fancybox-thumb" rel="fancybox-thumb" href="assets/img/currentApartment2.png" title=""><img src="assets/img/currentApartment2.png" class="img-fluid" alt="apartment bambolim"></a>
                     </div>
                 </div>
             </div>
@@ -193,13 +193,47 @@
     </div>
 
     <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="lib/jquery.mousewheel.pack.js?v=3.1.3"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="source/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+    <script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+    
     <script>
     function topFunction() {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
+    
+    $(document).ready(function() {
+        $(".fancybox-thumb").fancybox({
+            prevEffect	: 'none',
+            nextEffect	: 'none',
+            helpers	: {
+                
+                thumbs	: {
+                    width	: 50,
+                    height	: 50
+                }
+            }
+        });
+    });
     </script>
 </body>
 
