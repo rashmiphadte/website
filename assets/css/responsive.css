@@ -21,12 +21,49 @@
     
 
 }
-@media screen and (max-width: 768px) { 
-    
+@media screen and (max-width: 768px) {
+    #navbarNav { right: 0; font-size: 18pt; }
+    .navbar-nav li { margin: 0 .5em !important; }
+    .intro-quote h1 { padding: 0 !important; }
+    .intro-quote h1 strong { font-size: 58pt; }
+    .submit { width: 80% !important; }
+    .addressSection { font-size:20pt; }
+    .socialIcons a { padding: 0 0.3em; }
 }
 @media screen and (max-width: 640px) {
-   
+    .logo img { width: 80%; }
+    .navbar-toggler { margin-top: 4em;}
+    .sticky .navbar-toggler { margin-top: 0em; }
+    .navbar-collapse { margin:0 !important; }
+    .callInfo a span { font-size: 18pt !important; }
+    .intro-section h1 { font-size: 45pt; }
+    .intro-section p { font-size: 22pt; }
+    .intro-section a { font-size: 1.5em; margin-bottom: 1.5em; }
+    .intro-quote h1 { padding:0 !important; font-size: 32pt; margin-top: 0 !important; }
+    .intro-quote p { padding-right: 0 !important; font-size: 22pt; }
+    .project-section h1 { font-size: 40pt; letter-spacing: 15pt; margin-bottom: .7em; }
+    .testimonial-section h1 { font-size: 30pt; letter-spacing: 12pt; }
+    .testimonial-bg { padding: 0.5em; }
+    .testimonial-bg p { font-size: 28pt; margin-top: 0.5em; margin-bottom: 1em; text-align: center; }
+    .testimonial-bg h3 { font-size: 22pt; }
+    .profile img { width: 70%; display: block; margin: 0 auto; }
+    .contactUs h1 { padding: 0.7em 0; font-size: 30pt }
+    .constacUsHome form p { font-size: 20pt; }
+    .addressSection { font-size: 22pt; }
+    .footer-section { padding: 2em 1em 1.5em; }
+    .footerLinks { text-align: center; }
+    .socialIcons { margin-top: .5em; }
+    .designedBy { margin-top: 1em; text-align: center; }
+    .designedBy span { display: inline-block;}
+    .current-project-section h1, .completed-project-section h1 { font-size: 32pt; margin: 0 !important; }
+    .fancybox-thumb img { display: block; margin: 0 auto; }
+    .testimonial-header { font-size: 22pt; margin: 1em 0 !important; }
+    .testimonial-div { margin-top: 1em !important; }
+    .testimonial-div p { margin-top: .5em; margin-bottom: .9em; text-align: justify !important; }
+    .testimonialPicTop { margin-top: 0em !important; }
+    .testimonialPicBottom { margin-bottom: 0 !important; }
+    .testimonialPicTop img, .testimonialPicBottom img  { display: block; margin: 0 auto;}
         @media screen and (max-width: 320px) {
-         
+            
         }
     }

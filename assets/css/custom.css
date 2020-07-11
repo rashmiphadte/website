@@ -40,6 +40,53 @@ body {
   zoom: 0.67;
 }
 
+.videoBg {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  z-index: 999999;
+  background: #000;
+  display: none;
+}
+#introVideo {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%
+}
+.videoLogo {
+  position: absolute;
+  left:-9999px;
+  top:-9999px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.mute-video {
+  background:url("../img/unmute-icon.png") no-repeat center grey;
+  background-size:32px;
+  border:0;
+  width:32px;
+  height:32px;
+  text-indent:-999px;
+  width: 3em;
+  height: 3em;
+  text-indent: -999px;
+  z-index: 99999999;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  border-radius: 10%;
+}
+.unmute-video {
+  background:url("../img/mute-icon.png") no-repeat center grey;
+  background-size:32px;
+}
+
 .margin-top-5 {
   margin-top: 5%;
 }
@@ -67,6 +114,18 @@ body {
 .navbar-dark .navbar-nav .nav-link {
   color: #fff;
 }
+
+/*sticky header position*/
+.sticky {
+  position: fixed !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  width: 100% !important;
+}
+.sticky .logo, .sticky .callInfo { display:none; }
+.sticky .collapse { margin-top:0em !important; }
 
 .active a {
   /*border-bottom: 5px solid #9999ff;
@@ -100,6 +159,12 @@ body {
   width: 39pt;
   height: 80pt;
   background-image: url("../img/next.png");
+}
+
+.carousel-item {
+  transition: -webkit-transform .9s ease-out;
+  transition: transform .9s ease-out;
+  transition: transform .9s ease-out,-webkit-transform .9s ease-out;
 }
 
 .intro-section {
@@ -201,7 +266,7 @@ q::after {
 
 .project-section a {
   color: #5359A3;
-  font-size: 40pt;
+  font-size: 32pt;
   display: block;
   text-align: center;
   font-family: 'Poppins';
@@ -224,7 +289,7 @@ q::after {
 
 .testimonial-bg p {
   color: #fff;
-  font-size: 34pt;
+  font-size: 28pt;
   margin-top: 1em;
   font-family: 'Century751No2';
   line-height: 1.3em;
@@ -315,6 +380,8 @@ q::after {
   line-height: 1.2em;
 }
 
+.addressSection p a, .contactUs p a { color: #264795; text-decoration: none;}
+.scrollTop { position: relative; left: 80%; cursor: pointer; }
 .footerBg {
   background: url(../img/footerBg.png) no-repeat bottom #FFF;
   min-height: 180px;
@@ -361,7 +428,6 @@ q::after {
 .designedBy span {
   display: block;
   font-size: 14pt;
-  text-transform: uppercase;
 }
 
 .about-section {
@@ -377,6 +443,8 @@ q::after {
   left: 0;
   z-index: 9999;
   width: 100%;
+  transform: translateZ(0);
+    transition:all 0.5s;
 }
 
 

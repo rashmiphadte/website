@@ -85,31 +85,40 @@
                 <iframe style="width:100%; border:0;margin: 17px 0;min-height: 550px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3848.600831677981!2d73.96132231484849!3d15.289548989366672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfb137723c6281%3A0x4800fc6ec5547007!2sR%26A%20Builders!5e0!3m2!1sen!2sin!4v1593965082551!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
         </div>
+    </div>
 
+       <!-- contact us -->
+       <div class="container-fluid contactUs mt-5">
         <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-7">
+            <div class="col-md-2"></div>
+            <div class="col-md-5 constacUsHome">
+                <form class="clearfix" style="border-right: 2px solid #999999;">
+                    <p><label> Your Name (required)</label><br />
+                        <span class="your-name"><input type="text" name="name" value="" size="40" class="text" /></span></p>
+                    <p><label> Your Email (required)</label><br />
+                        <span class="your-email"><input type="email" name="your-email" value="" size="40" class="email" /></span></p>
+                    <p class="mt-2"><label> Your Message</label><br />
+                        <span class="your-message"><textarea name="your-message" cols="40" rows="6" class="textarea"></textarea></span> </p>
+                    <p class="text-right" style="float: right;"><input type="submit" value="Send" class="submit" /></p>
+                </form>
+            </div>
+            <div class="col-md-3 pl-5 addressSection">
                 <img src="assets/img/footer_logo.png" class="img-fluid mb-4">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>Registered Office:<br />
-                            <b>419/420, Fourth Floor,<br />
-                            Lake Plaza<br />
-                            Opp. Fatorda Stadium<br />
-                            Margao - Goa</b>    
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="mt-2">Mobile:<br />
-                            <b>+91 98223 82898</b></p>
-                        <p>E-mail:<br />
-                            <b>rosevelt24@yahoo.com</b></p>
-                    </div>
-                </div>
+                <p>Registered Office:<br />
+                    <b>419/420, Fourth Floor,<br />
+                    Lake Plaza<br />
+                    Opp. Fatorda Stadium<br />
+                    Margao - Goa</b>    
+                </p>
+                <p>Mobile:<br />
+                    <b>+91 98223 82898</b></p>
+                <p>E-mail:<br />
+                    <b><a href="mailto:rosevelt24@yahoo.com" title="Mail to">rosevelt24@yahoo.com</a></b></p>
             </div>
         </div>
     </div>
 
+    <img onclick="topFunction()" class="scrollTop" src="assets/img/scrollTop.png" class="img-fluid mb-4">
     <div class="container-fluid" style="background: #264795;">
         <div class="row footerBg">
 
@@ -158,6 +167,12 @@
     <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    </script>
 </body>
 
 </html>
