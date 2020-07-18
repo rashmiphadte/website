@@ -1,3 +1,34 @@
+<?php
+$msg='';
+
+if (isset($_REQUEST['action'])) {
+    $ubname = $_REQUEST['your-name'];
+    $ubname= str_replace("'","''",$ubname);
+
+    $uemail = $_REQUEST['your-email'];
+    $uemail =	str_replace("'","''",$uemail );
+
+    $uquery = $_REQUEST['your-message'];
+    $uquery=	str_replace("'","''",$uquery);
+
+    $body = "Dear,<br><br><b> <u>Contact details</u>:</b>";
+    $body .="<br><b>Name of Person :</b> $ubname"; 
+    $body .="<br><b>Email :</b> $uemail"; 
+    $body .="<br><b>Message :</b> $uquery"; 
+
+    //echo "body=".$body;
+
+    $to =  "rosevelt24@yahoo.com";
+ 
+    $headers  = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+    $headers .= "From: $uemail";
+    $subject = "Enquiry";
+
+    mail($to, $subject, $body, $headers);
+}
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -18,7 +49,7 @@
 
 <body>
     <div class="videoBg" style="display:none;">
-        <video id="introVideo" controls="false" preload="true" muted="muted"  poster="" >
+        <video preload = "auto" id="introVideo" controls="false" preload="true" muted="muted"  poster="" >
             <source src="assets/video/sea.mp4" type="video/mp4">
         </video>
         <button class="mute-video"></button>
@@ -28,7 +59,7 @@
     <header>
         <nav id="navbar" class="navbar navbar-expand-md navbar-dark"  data-toggle="sticky-onscroll">
             <!-- Brand -->
-            <a class="navbar-brand my-4 mx-5 logo" href="index.html"><img src="assets/img/logo.png" alt="logo" class="img-fluid"
+            <a class="navbar-brand my-4 mx-5 logo" href="index.php"><img src="assets/img/logo.png" alt="logo" class="img-fluid"
                     width=""></a>
 
             <!-- Toggler/collapsibe Button -->
@@ -41,7 +72,7 @@
 
                 <ul class="navbar-nav ml-auto" id="navbarNav">
                     <li class="nav-item active mx-5">
-                        <a class="nav-link" href="index.html">Home </a>
+                        <a class="nav-link" href="index.php">Home </a>
                     </li>
                     <li class="nav-item mx-5">
                         <a class="nav-link" href="about.html">About Us </a>
@@ -64,7 +95,7 @@
                         <a class="nav-link" href="testimonial.html">Testimonials</a>
                     </li>
                     <li class="last-nav  nav-item ml-5">
-                        <a class="nav-link" href="contact_us.html">Contact Us</a>
+                        <a class="nav-link" href="contact_us.php">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -72,7 +103,7 @@
             <div class="callInfo float-right mt-2 text-right">
                 <div class="d-block">
                     <span style=" display: block;"><a href="tel:+91 98223 82898" class=""><img src="assets/img/call.png" alt="call" class="img-fluid mr-2"
-                        width=""> Call Now </span><span style="font-size: 22pt; color: #FEE400;">+91 98223 82898</a></span>
+                        width=""> Call Now </span><span style="font-size: 16pt; color: #FEE400;">+91 98223 82898</a></span>
                 </div>
             </div>
         </nav>
@@ -258,14 +289,14 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-5 constacUsHome">
-                <form class="clearfix" style="border-right: 2px solid #999999;">
+                <form action="index.php?action=submit"  method="post" class="clearfix" style="border-right: 2px solid #999999;">
                     <p><label> Your Name (required)</label><br />
-                        <span class="your-name"><input type="text" name="name" value="" size="40" class="text" /></span></p>
+                        <span class="your-name"><input type="text" name="your-name" id="name" value="" size="40" class="text" /></span></p>
                     <p><label> Your Email (required)</label><br />
-                        <span class="your-email"><input type="email" name="your-email" value="" size="40" class="email" /></span></p>
+                        <span class="your-email"><input type="email" id="email" name="your-email" value="" size="40" class="email" /></span></p>
                     <p class="mt-2"><label> Your Message</label><br />
                         <span class="your-message"><textarea name="your-message" cols="40" rows="6" class="textarea"></textarea></span> </p>
-                    <p class="text-right" style="float: right;"><input type="submit" value="Send" class="submit" /></p>
+                    <p class="text-right" style="float: right;"><input onclick="return funval();" type="submit" value="Send" class="submit" /></p>
                 </form>
             </div>
             <div class="col-md-3 pl-5 addressSection">
@@ -295,7 +326,7 @@
                     <div style="position: relative; width: fit-content; ">
                     <ul class="footerLinks" style="width: fit-content;">
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="index.php">Home</a>
                         </li>
                         <li>
                             <a href="about.html">About Us</a>
@@ -307,7 +338,7 @@
                             <a href="testimonial.html">Testimonials</a>
                         </li>
                         <li class="last">
-                            <a href="contact_us.html">Contact Us</a>
+                            <a href="contact_us.php">Contact Us</a>
                         </li>
                     </ul>
                     &copy; R&A Builders 2020 <a href="disclaimer.html" style="position: absolute; right: 0.5em; color: #FFF;">Disclaimer</a>
@@ -329,25 +360,8 @@
     <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
     <script>
-        // When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
-
-// Get the header
-var header = document.getElementById("navbar");
-
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-
         $(document).ready(function() {
             
 
