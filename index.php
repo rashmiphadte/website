@@ -1,6 +1,26 @@
 <?php
 $msg='';
 
+/*$from = "joyco107@hotmail.com";
+$to = "joyco107@gmail.com";
+$to_fullname = "John Doe";
+$subject = "Simple test for mail function";
+$message = "This is a test to check if php mail function sends out the email";
+$headers  = "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/html; charset=utf-8\r\n";
+$headers .= "To: $to_fullname <$to>\r\n";
+$headers .= "From:" . $from;
+if (mail($to, $subject, $message, $headers)) {
+   echo("
+      Message successfully sent!
+   ");
+} else {
+    print_r(error_get_last());
+   echo("
+      Message delivery failed...
+   ");
+}*/
+
 if (isset($_REQUEST['action'])) {
     $ubname = $_REQUEST['your-name'];
     $ubname= str_replace("'","''",$ubname);
@@ -16,16 +36,25 @@ if (isset($_REQUEST['action'])) {
     $body .="<br><b>Email :</b> $uemail"; 
     $body .="<br><b>Message :</b> $uquery"; 
 
+    $message = "This is a test to check if php mail function sends out the email";
+
     //echo "body=".$body;
 
     $to =  "rosevelt24@yahoo.com";
+    $to_fullname = "Rosevelt Valadares";
  
     $headers  = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-    $headers .= "From: $uemail";
-    $subject = "Enquiry";
+    $headers .= "To: $to_fullname <$to>\r\n";
+    $headers .= "From:". $uemail;
+    $subject = "Enquiry from " . $uemail;
 
     mail($to, $subject, $body, $headers);
+    /*if (!mail($to, $subject, $body, $headers)) { 
+        print_r(error_get_last());
+    } else {
+        echo("Message successfully sent!");
+    }*/
 }
 ?>
 
@@ -266,6 +295,20 @@ if (isset($_REQUEST['action'])) {
                     </div>
                 </div>
             </div>
+            <div class="carousel-item">
+                <div class="container-fluid">
+                    <div class="row testimonial-bg">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-7">
+                            <p><q>Rosevelt is known for keeping up his word, quality work  and customer satisfaction. Out of my experience as a customer, I recommend Rosevelt to anyone who would like to buy a flat</q></p>
+                            <h3><b>Dr. Prabhakar Rane</b></h3>
+                        </div>
+                        <div class="col-md-3 profile">
+                            <img src="assets/img/profile4.png" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -378,10 +421,9 @@ if (isset($_REQUEST['action'])) {
 
             var visited = readCookie('visited');
 
-            if (visited == 'yes') {
-                // second page load, cookie active
-                $('.videoBg').remove();
-            } else {
+            var anHourAgo = new Date();
+            anHourAgo.setTime(anHourAgo.getTime());
+            //if (Date.parse(anHourAgo) > Date.parse(visited)) {
                 // first page load, launch fancybox
                 $('.videoBg').show();
                 var video = document.getElementById("introVideo");
@@ -407,10 +449,13 @@ if (isset($_REQUEST['action'])) {
 
                 var videoLogoTop= ($("#introVideo").height()/2) - ($('.videoLogo').height()/2);
                 $('.videoLogo').css({"top":videoLogoTop});
-            }
+            /*} else {
+                 // second page load, cookie active
+                 $('.videoBg').remove();
+            }*/
             var date = new Date();
-            date.setTime(date.getTime()+(60*60*1000));
-                document.cookie= "visited=yes;expires="+date;
+            date.setTime(date.getTime()+(10*60*1000));
+                document.cookie= "visited="+date+";expires="+date;
         });
 
         function topFunction() {

@@ -19,11 +19,13 @@ if (isset($_REQUEST['action'])) {
     //echo "body=".$body;
 
     $to =  "rosevelt24@yahoo.com";
+    $to_fullname = "Rosevelt Valadares";
  
     $headers  = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-    $headers .= "From: $uemail";
-    $subject = "Enquiry";
+    $headers .= "To: $to_fullname <$to>\r\n";
+    $headers .= "From:". $uemail;
+    $subject = "Enquiry from " . $uemail;
 
     mail($to, $subject, $body, $headers);
 }
